@@ -18,6 +18,12 @@
             padding: 20px;
             text-align: center;
         }
+        h2.title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
         main {
             padding: 20px;
             display: flex;
@@ -26,56 +32,60 @@
         }
         .aula {
             background-color: #fff;
+            border: none;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 30px; /* Aumentado para maior espaçamento entre os cards */
-            width: calc(100% - 60px); /* Ajuste conforme margem aumentada */
-            max-width: 300px; /* Largura máxima para garantir a legibilidade */
+            margin: 15px;
+            width: 340px; 
             padding: 20px;
             text-align: center;
-            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 340px;
         }
         .aula:hover {
             transform: translateY(-5px);
         }
         .tematica {
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
         }
         .tematica h2 {
-            color: #000;
-            margin-bottom: 10px;
-            text-align: center;
+            font-size: 16px;
+            margin-bottom: 15px;
         }
         .tematica img {
             width: 100%;
-            height: auto;
+            height: 180px;
+            object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 10px; /* Espaçamento entre imagem e botão */
+            margin-bottom: 15px;
         }
         .ficha {
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
-            margin-top: 10px;
             text-align: center;
         }
         .ficha a {
             text-decoration: none;
             color: #fff;
+            background-color: #888;
             display: inline-block;
-            padding: 8px 16px;
-            background: linear-gradient(to bottom, #444 0%, #888 100%);
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-weight: bold;
         }
         .ficha a:hover {
-            background: linear-gradient(to bottom, #333 0%, #666 100%);
+            background-color: #666;
         }
-
-        /* Media Query para dispositivos com largura máxima de 600px (como smartphones) */
         @media only screen and (max-width: 600px) {
+            main {
+                flex-direction: column;
+            }
             .aula {
-                width: calc(100% - 30px); /* 100% menos o dobro da margem */
-                max-width: none; /* Remover a largura máxima para ocupar a largura total */
+                width: calc(100% - 40px);
+                height: auto;
             }
         }
     </style>
@@ -84,26 +94,29 @@
     <header>
         <h1>Apostilas</h1>
     </header>
+    
+    <h2 class="title">Inclusão Digital</h2>
+    
     <main>
         <div class="aula">
             <div class="tematica">
-                <h2>Sistema de Informação e Noções Gerais de Informática Básica</h2>
+                <h2>Módulo 1: Sistema de Informação e Noções Gerais de Informática Básica</h2>
                 <img src="https://www.cursosabeline.com.br/webroot/cur_cache/curso-com-certificado-de-informatica-basica-1567603559-870-810b01c8.jpg" alt="informática básica">
                 <div class="ficha">
-                    <p><a href="https://ravellsl.github.io/apostilas-No-esGeraisInform-ticaB-sica/" target="_blank">Acessar</a></p>
+                    <a href="https://ravellsl.github.io/apostilas-No-esGeraisInform-ticaB-sica/" target="_blank">Acessar</a>
                 </div>
             </div>
-
-            <div class="tematica">
-                <h2>Sistema Operacional</h2>
-                <img src="https://www.ramalvirtual.com.br/uploads/images/2020/06/sistema-operacional-1593107306.jpg" alt="informática básica">
-                <div class="ficha">
-                    <p><a href="https://ravellsl.github.io/apostilas-sistemas-operacionais/" target="_blank">Acessar</a></p>
-                </div>
-            </div>
-        </div> 
+        </div>
         
-        <!-- Adicione mais aulas conforme necessário -->
+        <div class="aula">
+            <div class="tematica">
+                <h2>Módulo 2: Sistema Operacional</h2>
+                <img src="https://www.ramalvirtual.com.br/uploads/images/2020/06/sistema-operacional-1593107306.jpg" alt="sistema operacional">
+                <div class="ficha">
+                    <a href="https://ravellsl.github.io/apostilas-sistemas-operacionais/" target="_blank">Acessar</a>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
